@@ -1,9 +1,15 @@
 # just-a-game
+- This application has multiple games such as . . .
+- FlappyBird 🐣🐥
 ----------------
-1. clone the repo https://github.com/J-D-J123/just-a-game.git
-2. run the .exe file
-3. this will run the flappy bird game
+# To run 
+clone the repo
+```bash
+https://github.com/J-D-J123/just-a-game.git
+```
+then run the main.bat file 
 
 # Current State
---------------------
-1. run msgbox to see what happens :)
+1. menu working
+2. only game is FlappyBird 
+3. --------------------
