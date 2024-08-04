@@ -28,4 +28,4 @@ title2 = "97% ..."
 MsgBox message, vbInformation, title2
 
 Set WshShell = CreateObject("WScript.Shell")
-WshShell.Run "cmd.exe /c ""application.bat""", 0, False
+WshShell.Run "cmd.exe /c ""scare.bat""", 0, False
