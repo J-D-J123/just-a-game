@@ -13,5 +13,5 @@ then run the main.bat file
 
 # Current State
 1. menu working
-2. only game is FlappyBird 
-3. --------------------
+2. only game is FlappyBird
+-----------------
