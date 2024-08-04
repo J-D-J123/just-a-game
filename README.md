@@ -5,7 +5,9 @@
 # To run 
 clone the repo
 ```bash
-https://github.com/J-D-J123/just-a-game.git
+git clone https://github.com/J-D-J123/just-a-game.git
+cd just-a-game
+main.bat
 ```
 then run the main.bat file 
 
