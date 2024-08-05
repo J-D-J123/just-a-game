@@ -14,17 +14,16 @@ echo "> \________|         /_______  /         \________||___\_______ \/______  
 echo ">                            \/                                \/       \/ 
 
 echo ">
-echo "> Press(1) for Flappy Bird    Press(2) for the Unknown    Press(3) for Block Break 
-echo "> (Py must be installed)       (Py must be installed)      (Py must be installed)
+echo "> Press(1) for Flappy Bird    Press(2) for BlockBreak     Press(3) to exit
+echo "> (Py must be installed)       (Py must be installed)      
 echo ">
-echo ">Press(4) to exit
 echo ">
 echo ">
 
 set /p ans=":> Enter Number: "   
 
 if %ans%==1 goto FlappyBird
-if %ans%==2 goto Unknown
+if %ans%==2 goto BlockBreak
 if %ans%==3 goto exit
 
 :FlappyBird
@@ -55,13 +54,13 @@ if %pythonFound%==1 (
     echo Python is not installed. Please install Python and try again.
 )
 
-:Unknown
+:BlockBreak
 cls
-echo Starting Unknown . . .
-
+echo Starting BlockBreak . . .
 :: start up the .vbs script in the back
-cscript //nologo Unknown\run.vbs
-cls
+@REM cscript //nologo Unknown\run.vbs
+echo no BlockBreak version is made 
+echo it will come out soon . . .
 pause
 goto menu
 
