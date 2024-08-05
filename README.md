@@ -1,16 +1,9 @@
-```
-     ____.         ________                 ____.____________  ________  
-    |    |         \______ \               |    /_   \_____  \ \_____  \ 
-    |    |  ______  |    |  \   ______     |    ||   |/  ____/   _(__  < 
-/\__|    | /_____/  |    `   \ /_____/ /\__|    ||   /       \  /       \
-\________|         /_______  /         \________||___\_______ \/______  /
-                           \/                                \/       \/
-```
-                           
 # just-a-game
 - This application has multiple games such as . . .
-- FlappyBird 🐣🐥
+- FlappyBird 🐣🐥 
+- BlockBreak comming soon 🧱
 ----------------
+![cp.png](https://github.com/J-D-J123/just-a-game/blob/main/cp.png)
 # To run 
 clone the repo
 ```bash
