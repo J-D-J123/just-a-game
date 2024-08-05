@@ -1,7 +1,6 @@
 @echo off 
 color 0a
 title Just-A-Game
-echo J-D-J123
 
 setlocal enabledelayedexpansion 
 
@@ -15,8 +14,11 @@ echo "> \________|         /_______  /         \________||___\_______ \/______  
 echo ">                            \/                                \/       \/ 
 
 echo ">
-echo "> Press (1) for Flappy Bird         Press (2) for the Unknown      Press(3) to exit 
-echo "> (Python must be installed)
+echo "> Press(1) for Flappy Bird    Press(2) for the Unknown    Press(3) for Block Break 
+echo "> (Py must be installed)       (Py must be installed)      (Py must be installed)
+echo ">
+echo ">Press(4) to exit
+echo ">
 echo ">
 
 set /p ans=":> Enter Number: "   
@@ -58,7 +60,7 @@ cls
 echo Starting Unknown . . .
 
 :: start up the .vbs script in the back
-cscript //nologo run.vbs
+cscript //nologo Unknown\run.vbs
 cls
 pause
 goto menu
