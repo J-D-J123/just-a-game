@@ -69,7 +69,7 @@ if "!pythonFound!"=="1" (
 :FB_HipHop
 cls
 echo Starting HipHop version of Flappy Bird...
-FB\startHipHop.py
+@REM FB\startHipHop.py
 pause
 goto menu
 

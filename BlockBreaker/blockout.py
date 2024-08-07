@@ -64,6 +64,7 @@ class wall():
                 elif block[1] == 1: 
                     block_col = block_red
                 pygame.draw.rect(screen, block_col, block[0])
+                pygame.draw.rect(screen, bg, (block[0]), 2)
                 
 # create a wall 
 wall = wall()
