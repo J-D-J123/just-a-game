@@ -21,6 +21,7 @@ echo ">
 echo ">
 
 set /p ans=":> Enter Number: "   
+@REM set ans=%ans: =%
 
 if "%ans%"=="1" goto FlappyBird
 if "%ans%"=="2" goto BlockBreak
@@ -29,47 +30,23 @@ goto menu
 
 :FlappyBird
 cls
-echo Checking for Python installation . . . 
-:: Check if Python is installed
-py --version > temp.txt 2>&1
-set "pythonFound=0"
+echo "> What type of song do you want to use?
+echo "> This will play the song in the background. 
+echo ">
+echo "> HipHop(1)
+echo "> Jazz(2)
+echo "> EDM(3)
 
-:: Read the temp file to check for the word "Python"
-for /f "tokens=*" %%A in (temp.txt) do (
-    echo %%A | find /i "Python" >nul
-    if !errorlevel! == 0 (
-        set "pythonFound=1"
-    )
-)
-
-:: Remove the temp file 
-del temp.txt
-
-:: proceed to start FlappyBird 
-if "!pythonFound!"=="1" (
-    echo "> What type of song do you want to use?
-    echo "> This will play the song in the background. 
-    echo ">
-    echo "> HipHop(1)
-    echo "> Jazz(2)
-    echo "> EDM(3)
-
-    set /p songANS=":> Enter a Number: "
-
-    if "%songANS%"=="1" goto FB_HipHop
-    if "%songANS%"=="2" goto FB_Jazz
-    if "%songANS%"=="3" goto FB_EDM
-
-) else (
-    echo Python is not installed. Please install Python and try again.
-    pause 
-    goto menu
-)
+set /p songANS=":> Enter a Number: "
+@REM set songANS=%songANS: =%
+if "%songANS%"=="1" goto FB_HipHop
+if "%songANS%"=="2" goto FB_Jazz
+if "%songANS%"=="3" goto FB_EDM
 
 :FB_HipHop
 cls
 echo Starting HipHop version of Flappy Bird...
-@REM FB\startHipHop.py
+FB\startHipHop.py
 pause
 goto menu
 

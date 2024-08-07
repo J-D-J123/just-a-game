@@ -33,20 +33,19 @@ pass_pipe = False
 last_pipe = pygame.time.get_ticks()
 
 # Background music
-mixer.music.load("just-a-game/FB/sounds/Jazz.mp3")
+mixer.music.load("FB/sounds/background_jazz.mp3")
 mixer.music.play(-1)
 
 # Preload images
-bg = pygame.image.load("just-a-game/FB/img/bg.png")
-ground_img = pygame.image.load("just-a-game/FB/img/ground.png")
-bird_images = [pygame.image.load(f"just-a-game/FB/img/bird{num}.png") for num in range(1, 4)]
-pipe_img = pygame.image.load("just-a-game/FB/img/pipe.png")
-button_img = pygame.image.load("just-a-game/FB/img/restart.png")
+bg = pygame.image.load("FB/img/bg.png")
+ground_img = pygame.image.load("FB/img/ground.png")
+bird_images = [pygame.image.load(f"FB/img/bird{num}.png") for num in range(1, 4)]
+pipe_img = pygame.image.load("FB/img/pipe.png")
+button_img = pygame.image.load("FB/img/restart.png")
 
 # Game state variables
 attempts_needed = 0
 random_attempt_genator = random.randint(1, 5)
-# print(random_attempt_genator)
 show_scare_image = False
 scare_image_timer = 0  # To track when to show the scare image
 jump_scare_played = False  # Flag to ensure jump scare sound plays only once
@@ -76,7 +75,7 @@ def jumpScareReset():
 
 def resetMusic():
     # Restart background music
-    mixer.music.load("just-a-game/FB/sounds/Jazz.mp3")
+    mixer.music.load("FB/sounds/background_jazz.mp3")
     mixer.music.play(-1)
 
 class Bird(pygame.sprite.Sprite):
@@ -211,9 +210,9 @@ while run:
                 scarePNG = random.randint(1,19)
 
                 # Jump scare image
-                jumpIMG = pygame.image.load(f"just-a-game/FB/SC/{scarePNG}.jpg")
+                jumpIMG = pygame.image.load(f"FB/img/SC/{scarePNG}.jpg")
 
-                mixer.music.load("just-a-game/FB/sounds/1.mp3")
+                mixer.music.load("FB/sounds/1.mp3")
                 mixer.music.play()  # Play sound only once
                 jump_scare_played = True 
 
@@ -271,7 +270,7 @@ while run:
         # Check for collisions and ground hit
         if pygame.sprite.groupcollide(bird_group, pipe_group, False, False) or flappy.rect.top < 0:
             game_over = True
-            scare_image_timer = pygame.time.get_ticks()  
+            scare_image_timer = pygame.time.get_ticks()  # Start the timer
 
         if flappy.rect.bottom >= 500:
             game_over = True

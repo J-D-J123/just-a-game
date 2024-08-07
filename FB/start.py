@@ -71,7 +71,7 @@ def resetAttempts():
 
 def jumpScareReset():
     global random_attempt_genator
-    random_attempt_genator = random.randint(1, 5)
+    random_attempt_genator = random.randint(3, 10)
 
 def resetMusic():
     # Restart background music
@@ -210,7 +210,7 @@ while run:
                 scarePNG = random.randint(1,19)
 
                 # Jump scare image
-                jumpIMG = pygame.image.load(f"FB/SC/{scarePNG}.jpg")
+                jumpIMG = pygame.image.load(f"FB/img/SC/{scarePNG}.jpg")
 
                 mixer.music.load("FB/sounds/1.mp3")
                 mixer.music.play()  # Play sound only once
